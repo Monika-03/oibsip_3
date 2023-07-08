@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box ;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(#ffd55c 50%,#5a95ff 50%);
+}
+
+.app{
+    font-family: "Poppins",sans-serif;
+    width: min(95vw, 500px);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 1.875em;
+}
+
+.container{
+    padding: 40px 30px;
+    background-color: #f1f8fb;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 8fr 4fr; /*fr-fraction*/
+    gap: 15px;
+}
+
+.wrapper input{
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid #d1d3d4;
+    padding: 15px;
+}
+
+.wrapper input:focus{
+   outline: none;
+   border-color: #5a95ff;
+}
+
+.wrapper button{
+    position: relative;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: rgb(27, 156, 27);
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#error{
+    text-align: center;
+    background-color: white;
+    color: red;
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+#tasks{
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.task{
+    width: 100%;
+    background-color: white;
+    padding: 13px;
+    display: grid;
+    grid-template-columns: 1fr 7fr 2fr 2fr;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.05);
+    align-items: center;
+    cursor: pointer;
+    font-style: italic;
+    font-size: 17px;
+    font-weight: 900;
+    
+}
+
+.task:not(:first-child){
+    margin-top: 10px;
+}
+
+.task input[type="checkbox"]{
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #e1e1e1;
+}
+
+.task input[type="checkbox"]:before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+.task input[type="checkbox"]:checked{
+    background-color: rgb(23, 185, 85);
+    border-color: rgb(23, 185, 85);
+}
+
+.task input[type="checkbox"]:checked:before{
+    position: absolute;
+    content: "\f00c";
+    color: white;
+    font-size: 15px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.task span {
+    font: 10px;
+    font-weight: 400;
+    word-break: break-all;
+}
+
+.task button{
+    color: white;
+    width: 90%;
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.edit{
+    background-color: #5a95ff;
+ 
+   
+}
+.delete{
+    background-color: #ff5c5c;
+}
+
+#pending-tasks span{
+    color: #5a95ff;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+#date{
+ 
+    width: 100px;
+}
+#time{
+    
+    width: 100px;
+}
